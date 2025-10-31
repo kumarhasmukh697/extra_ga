@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Run a test
+      run: |
+        echo "Running tests..."
+        # Add your test commands here
+        
+    - name: Build
+      run: |
+        echo "Building project..."
+        # Add your build commands here
